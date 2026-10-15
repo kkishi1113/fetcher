@@ -1,0 +1,26 @@
+{
+  "name": "fetcher",
+  "version": "0.0.0",
+  "private": true,
+  "description": "fetch をラップした、外部依存なし・型安全な HTTP クライアント",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run typecheck && npm run test"
+  },
+  "engines": {
+    "node": ">=20.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "msw": "^2.15.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.4"
+  }
+}
